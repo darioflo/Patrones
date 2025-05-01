@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Comando_Caminar_1 = require("./Comando_Caminar");
+var Comando_Saltar_1 = require("./Comando_Saltar");
+var Control_Remoto_1 = require("./Control_Remoto");
+var Robot_1 = require("./Robot");
+var robot = new Robot_1.Robot();
+var comandoCaminar = new Comando_Caminar_1.ComandoCaminar(robot);
+var comandoSaltar = new Comando_Saltar_1.ComandoSaltar(robot);
+var control = new Control_Remoto_1.ControlRemoto(comandoCaminar);
+console.log(control.presionarBoton());
+control.setComando(comandoSaltar);
+console.log(control.presionarBoton());
