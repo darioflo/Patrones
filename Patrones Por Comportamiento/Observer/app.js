@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Estacion_Clima_1 = require("./Estacion_Clima");
+var Pantalla_Grande_1 = require("./Pantalla_Grande");
+var Pantalla_Movil_1 = require("./Pantalla_Movil");
+var estacion = new Estacion_Clima_1.EstacionClima();
+var pantallaGrande = new Pantalla_Grande_1.PantallaGrande();
+var pantallaMovil = new Pantalla_Movil_1.PantallaMovil();
+estacion.agregar(pantallaGrande);
+estacion.agregar(pantallaMovil);
+estacion.actualizar("Soleado");
+estacion.cambiarClima("Lluvioso");
